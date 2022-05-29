@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="thank" style="justify-content: center;align-items: center;background-color: orangered;padding-top: 50px;padding-bottom: 342px;">
+<div class="container mt-5" style="justify-content: center;align-items: center;padding-top: 50px;">
+    <h1 style="color: white;font-weight: bold;">The Payment link has been sent to your email</h1>
+    <br>
+    <h1 style="color: white;font-weight: bold;">Thank you</h1>
+    <br>
+    <br>
+    <a href="{{url_for('home')}}" class="btn btn-outline-primary btn-lg" style="color: white;">Continue shopping</a>
+</div>
+</div>
+
+{% endblock %}

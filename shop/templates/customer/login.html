@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div style="background-color: orangered; padding-top: 50px;padding-bottom: 283px;">
+<div class="container mt-5" style="justify-content: center;align-items: center;">
+    {% from "_formhelpers.html" import render_field %}
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            
+    <div class="text-center h1 mt-5" style="color: white;">Login</div>
+    {% include '_messages.html' %}
+    <form method="post">
+        {{ form.csrf_token }}
+    <div style="color: black;">
+    
+    {{ render_field(form.email, class="form-control") }}
+    {{ render_field(form.password, class="form-control") }}
+    
+    
+    
+    </div>
+
+    <p><input type=submit value="Login" class="btn btn-outline-success btn-lg mt-3" style="color: white;font-weight: bold;"></p>
+    </form>
+</div>
+    <div class="col-md-4"></div>
+  
+</div>
+</div>
+</div>
+
+{% endblock %}

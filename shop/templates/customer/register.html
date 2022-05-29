@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% from "_formhelpers.html" import render_field %}
+
+
+<div style="background-color: orangered;padding-bottom: 108px;">
+<div class="container" style="justify-content: center;align-items: center;">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1 class="text-center mt-5" style="color: white;">Register</h1>
+            <br>
+            <br>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <form action="" method="post">
+        {{ form.csrf_token }}
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4" style="color: black;">
+                {{ render_field(form.name,class="form-control") }}
+                {{ render_field(form.username,class="form-control") }}
+                {{ render_field(form.email,class="form-control") }}
+                {{ render_field(form.password,class="form-control") }}
+                {{ render_field(form.confirm,class="form-control") }}
+                <br>
+                {{ form.profile() }}
+            </div>
+            <div class="col-md-4" style="color: black;">
+                {{ render_field(form.country,class="form-control") }}
+             
+                {{ render_field(form.city,class="form-control") }}
+                {{ render_field(form.contact,class="form-control") }}
+                {{ render_field(form.address,class="form-control") }}
+                {{ render_field(form.zipcode,class="form-control") }}
+                <br>
+                {{ form.submit(class="btn btn-lg btn-outline-success", style="color:white;font-weight:bold") }}
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </form>
+</div>
+</div>
+{% endblock %}
